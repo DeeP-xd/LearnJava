@@ -1,0 +1,55 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LearnJava | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/java/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <img class="logo" src="/java/assets/images/logo.svg">
+    <a href="/java/dashboard/">
+        <p class="dashboard-link">dashboard();</p>
+    </a>
+    <article>
+        
+        <h1>Zapis</h1>
+
+        <p>Do zapisu do pliku używamy klasy PrintWriter, której parametrem jest nazwa pliku / ścieżka do pliku, do którego chcemy zapisać dane.</p>
+
+        <div class="article-codebox">
+        PrintWriter writer = new PrintWriter(“plik.txt”);
+        </div>
+
+        <p>Tworzymy obiekt writer typu PrintWriter, do którego bezpośrednio przypisujemy plik (bez tworzenia innego obiektu, ani użycia klasy File). Kompletny program zapisujący dane wygląda w ten sposób:</p>
+
+        <div class="article-codebox">
+        import java.io.FileNotFoundException;<br>
+        import java.io.PrintWriter;<br>
+        <br>
+        public class Write{<br>
+            <u></u>public static void main(String[] args) throws FileNotFoundException{<br>
+                <u></u><u></u>PrintWriter writer = new PrintWriter(“plik.txt");<br>
+                <u></u><u></u>writer.println("Ala ma kota, a kot ma Alę");<br>
+                <u></u><u></u>writer.close();<br>
+            <u></u>}<br>
+        }
+        </div>
+
+        <p>Mimo, że Java posiada mechanizmy zwalniania pamięci, zamknięcie strumienia (writer.close();) jest bardzo ważne.</p>
+
+        <a href="#" onclick="previous(13)" class="article-prev"><p>previous();</p></a>
+        <a href="#" onclick="next(13)" class="article-next"><p>next();</p></a>
+        <div style="clear: both;"></div> 
+    </article>
+    <script src="/java/assets/js/cookies.js"></script>
+    <script src="/java/assets/js/main.js"></script>
+    <script src="/java/assets/js/article.js"></script>
+    <script>
+        $(document).ready( function () {
+            setProgress(13);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LearnJava | Cechy języka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/java/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <img class="logo" src="/java/assets/images/logo.svg">
+    <a href="/java/dashboard/">
+        <p class="dashboard-link">dashboard();</p>
+    </a>
+
+    <article>
+        <h1>Test</h1>
+
+        <h2>Pytanie 1</h2>
+        <p>Jaki jest wynik działania programu?</p>
+        <div class="article-codebox">
+            int a = 5;<br>
+            double b = 2.5;<br>
+            int c = a * b;<br>
+            int d = c % a;<br>
+            <br>
+            System.out.println(d);
+        </div>
+        <input type="text" id="answer-1" placeholder="odpowiedź">
+
+
+        <h2>Pytanie 2</h2>
+        <p>Jaki jest wynik działania programu?</p>
+        <div class="article-codebox">
+            String A[] = ["Adam", "Ania", "Ala", "Andrzej"];<br>
+            <br>
+            System.out.println(A[2]);
+        </div>
+        <input type="text" id="answer-2" placeholder="odpowiedź">
+
+
+        <h2>Pytanie 3</h2>
+        <p>Uzupełnij kod wyświetlający tablicę A[10][10]:</p>
+        <div class="article-codebox">
+            for (int i = 0; i < 10; i++) {<br>
+                <u></u>for (int j = 0; j < 10; i++) {<br><br>
+                    <u></u><u></u><input type="text" id="answer-3"  class="code-answer" placeholder="odpowiedź"><br>
+                <u></u>}<br>
+                <u></u>System.out.println();<br>
+            }
+        </div>
+
+
+        <h2>Pytanie 4</h2>
+        <p>Jak nazywa się domyślna opcja instrukcji switch?</p>
+        <input type="text" id="answer-4" placeholder="odpowiedź">
+
+
+        <h2>Pytanie 5</h2>
+        <p>Zmienna łańcuchowa String składa się z elementów typu: </p>
+        <input type="text" id="answer-5" placeholder="odpowiedź">
+
+
+        <h2>Pytanie 6</h2>
+        <p>Utwórz nowy element klasy Dog o nazwie dog1:</p>
+        <input type="text" id="answer-6" placeholder="odpowiedź">
+
+
+        <h2>Pytanie 7</h2>
+        <p>Który typ danych nie pasuje do reszty?</p>
+        <p>int / double / short / long</p>
+        <input type="text" id="answer-7" placeholder="odpowiedź">
+
+
+        <h2>Pytanie 8</h2>
+        <p>Jakiej funkcji musimy użyć, kończąc pracę z plikiem?</p>
+        <input type="text" id="answer-8" placeholder="odpowiedź">
+
+
+        <h2>Pytanie 9</h2>
+        <p>Jakiej klasy użyjemy, aby odczytać zawartość obiektu "file"?</p>
+        <div class="article-codebox">
+            File file = new File("file.txt");
+        </div>
+        <input type="text" id="answer-9" placeholder="odpowiedź">
+
+
+        <h2>Pytanie 10</h2>
+        <p>Program wyświetli "Ala ma kota", gdy zmienna x przyjmie wartość: </p>
+        <div class="article-codebox">
+            boolean x;
+            if (x) {
+                System.out.println("Ala ma kota");
+            }
+        </div>
+        <input type="text" id="answer-10" placeholder="odpowiedź">
+        <br>
+        <button class="test-button" onclick="submit()">Zakończ test</button>
+        <h2 id="result"></h2>
+    </article>
+    
+    <script src="/java/assets/js/cookies.js"></script>
+    <script src="/java/assets/js/main.js"></script>
+    <script src="/java/assets/js/test.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LearnJava | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/java/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <img class="logo" src="/java/assets/images/logo.svg">
+    <a href="/java/dashboard/">
+        <p class="dashboard-link">dashboard();</p>
+    </a>
+    <article>
+        <h1>if</h1>
+        
+        <p>If, czyli “jeżeli”. Podstawowa instrukcja warunkowa, której działanie najprościej porównać do działania trybów warunkowych np. w angielskim. Jeżeli zostanie spełniony warunek, coś się stanie, konkretnie:</p>
+        
+        <div class="article-codebox">
+        int a = 3;<br>
+        <br>
+        if (a < 5) {<br>
+            <u>a++;</u><br>
+        }<br>
+        <br>
+        // a = 4
+        </div>
+        
+        <p>Zmienna a na początku ma wartość 3. Instrukcja warunkowa mówi nam: “Jeżeli zmienna a jest mniejsza (nie równa) 5, dodam do niej 1”. W rezultacie po wykonaniu kodu zmienna a ma wartość 4. A co jeżeli warunek nie zostałby spełniony (np. zmienna a miałaby wartość 6)? Komputer pominąłby instrukcje zawarte wewnątrz instrukcji warunkowej (w naszym przypadku nie dodałby 1 do wartości a) i kontynuowałby dalej wykonywanie programu.</p>
+        
+        <div class="article-codebox">
+        int b = 4;<br>
+        <br>
+        if (b > 10) {<br>
+            <u>b = 5;</u><br>
+        } else {<br>
+            <u>b = 15;</u><br>
+        }<br>
+        <br>
+        // b = 15<br>
+        </div>
+        
+        <p>W tym wypadku nasz warunek nie został spełniony (4 nie jest większe od 10), więc komputer wykonał kod zawarty wewnątrz “else”. “Else” oznacza “w przeciwnym razie”, czyli instrukcje zawarte wewnątrz “else” będą wykonywane, kiedy warunek zawarty w “if” nie zostanie spełniony. Dlatego zmienna b po wykonaniu programu ma wartość 15.</p>
+        
+        <div class="article-codebox">
+        int c = 7;<br>
+        <br>
+        if (c == 8) {<br>
+            <u>c = 0;</u><br>
+        } else if (c < 8) {<br>
+            <u>c  = 10;</u><br>
+        } else {<br>
+            <u>c = 1;</u><br>
+        }<br>
+        <br>
+        // c = 10<br>
+        </div>
+        
+        <p>Tutaj widzimy bardziej rozbudowaną instrukcję warunkową w której mamy if, else if oraz else. Komputer najpierw sprawdzi czy zmienna c jest równa 8 (nie jest), po czym przejdzie do kolejnego testu - tym razem sprawdzi, czy c jest mniejsze od 8 (jest) i przypisze do zmiennej wartość 10, po czym zakończy wykonywanie instrukcji warunkowej. Nie przejdzie dalej, nawet gdybyśmy mieli jeszcze milion instrukcji “else if”. Komputer znalazł pasujący warunek, więc nie będzie szukał kolejnego.</p>
+
+        <a href="#" onclick="previous(4)" class="article-prev"><p>previous();</p></a>
+        <a href="#" onclick="next(4)" class="article-next"><p>next();</p></a>
+        <div style="clear: both;"></div>
+    </article>
+    <script src="/java/assets/js/cookies.js"></script>
+    <script src="/java/assets/js/main.js"></script>
+    <script src="/java/assets/js/article.js"></script>
+    <script>
+        $(document).ready( function () {
+            setProgress(4);
+        });
+    </script>
+</body>
+</html>

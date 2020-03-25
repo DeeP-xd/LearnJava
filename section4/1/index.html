@@ -1,0 +1,62 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LearnJava | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/java/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <img class="logo" src="/java/assets/images/logo.svg">
+    <a href="/java/dashboard/">
+        <p class="dashboard-link">dashboard();</p>
+    </a>
+    <article>
+        <h1>Typy danych</h1>
+
+        <h2>Liczby całkowite:</h2>
+
+        <ul>
+            <li>byte - 1 bajt - zakres od -128 do 127</li>
+            <li>short - 2 bajty - zakres od -32 768 do 32 767</li>
+            <li>int - 4 bajty - zakres od -2 147 483 648 do 2 147 483 647</li>
+            <li>long - 8 bajtów - zakres od -2^63 do (2^63)-1 (posiadają przyrostek L, lub l)</li>
+        </ul>
+
+        <h2>Liczby zmiennoprzecinkowe:</h2>
+        <ul>
+            <li>float - 4 bajty - max ok 6-7 liczb po przecinku (posiadają przyrostek F, lub f)</li>
+            <li>double - 8 bajtów - max ok 15 cyfr po przecinku (posiadają przyrostek D, lub d)</li>
+        </ul>
+
+        <h2>Inne:</h2>
+        <ul>
+            <li>char - pojedynczy znak (zapisywany pomiędzy apostrofami)</li>
+            <li>boolean - czyli prawda czy fałsz (zmienna tego typu przyjmuje wyłącznie wartość true lub false)</li>
+        </ul>
+
+        <h2>Przykłady:</h2>
+
+        <div class="article-codebox">
+            int a = 128;<br>
+            double b = 123.53;<br>
+            char c = ‘x’;<br>
+            bool d = false;<br>
+            String e = “lorem”;
+        </div>
+
+        <a href="#" onclick="previous(6)" class="article-prev"><p>previous();</p></a>
+        <a href="#" onclick="next(6)" class="article-next"><p>next();</p></a>
+        <div style="clear: both;"></div>
+    </article>
+    <script src="/java/assets/js/cookies.js"></script>
+    <script src="/java/assets/js/main.js"></script>
+    <script src="/java/assets/js/article.js"></script>
+    <script>
+        $(document).ready( function () {
+            setProgress(6);
+        });
+    </script>
+</body>
+</html>

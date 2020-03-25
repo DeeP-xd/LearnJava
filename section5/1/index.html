@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LearnJava | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/java/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <img class="logo" src="/java/assets/images/logo.svg">
+    <a href="/java/dashboard/">
+        <p class="dashboard-link">dashboard();</p>
+    </a>
+    <article>
+        <h1>Zmienne łańcuchowe</h1>
+
+        <p>Czyli łańcuchy znaków, które najprościej nazwać tekstem. Typem danych, którym się zajmiemy jest String, czyli ciąg dowolnych znaków, albo inaczej tablica zmiennych typu char. Możemy w zmiennej typu String zapisać słowo, zdanie lub dowolne znaki (lecz nie więcej niż 2 147 483 647). W praktyce wygląda to w ten sposób:</p>
+
+        <div class="article-codebox">
+        String name = “Bartek”;<br>
+        String sentence = “Ala ma kota.”;<br>
+        String postCode = “12-220”;
+        </div>
+
+        <p>Jak wcześniej wspomniałem zmienna typu String w praktyce jest tablicą pojedynczych znaków, dlatego możemy odwołać się do konkretnego znaku, jak do elementu tablicy:</p>
+
+        <div class="article-codebox">
+        char x = name[0];<br>
+        <br>
+        // x = ‘B’
+        </div>
+
+        <p>Przykład praktycznego użycia tej właściwości:</p>
+
+        <div class="article-codebox">
+        String name = “Katarzyna”;<br>
+        bool isMale;<br>
+        <br>
+        if (name[name.length - 1] == ‘a’) {<br>
+            <u></u>isMale = false;<br>
+        } else {<br>
+            <u></u>isMale = true;<br>
+        }
+        </div>
+
+        <p>Program sprawdza czy ostatni znak w imieniu, to “a” (wszystkie żeńskie imiona kończą się na “a”). Odwołując się do ostatniego elementu, a nie znając długości łańcucha znaków (imiona mogą mieć różną długość, dlatego nasz kod powinien być uniwersalny), najlepiej użyć zapisu name[name.length - 1]. Dlaczego “-1”? Ponieważ name.length zwraca nam rzeczywistą długość ciągu (w tym przypadku 9), a poszczególne znaki są indeksowane od 0 (patrz: Tablice). Dlatego ostatni znak (w tym przypadku “a”) ma indeks 8, dlatego chcąc się odwołać do ostatniego znaku, musimy od długości ciągu odjąć 1. Zmienna isMale przyjmie wartość true, jeżeli imię będzie męskie (nie będzie kończyło się na “a”), lub wartość false, jeżeli imię będzie żeńskie (będzie kończyło się na “a).</p>
+
+
+        <a href="#" onclick="previous(8)" class="article-prev"><p>previous();</p></a>
+        <a href="#" onclick="next(8)" class="article-next"><p>next();</p></a>
+        <div style="clear: both;"></div>
+    </article>
+    <script src="/java/assets/js/cookies.js"></script>
+    <script src="/java/assets/js/main.js"></script>
+    <script src="/java/assets/js/article.js"></script>
+    <script>
+        $(document).ready( function () {
+            setProgress(8);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LearnJava | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/java/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <img class="logo" src="/java/assets/images/logo.svg">
+    <a href="/java/dashboard/">
+        <p class="dashboard-link">dashboard();</p>
+    </a>
+    <article>
+
+        <h1>Operacje na plikach</h1>
+
+        <p>Zapis i odczyt plików w Javie jest stosunkowo prosty. Wystarczy poznać podstawy i nie przestraszyć się kilku nowych klas.</p>
+
+        <h2>Odczyt</h2>
+        
+        <p>Pierwszą klasą, która pozwoli nam utworzyć obiekt przechowujący dane pliku to File:</p>
+        
+        <div class="article-codebox">
+        File file = new File(“plik.txt”);
+        </div>
+        
+        <p>Utworzyliśmy nowy obiekt typu File o nazwie “file”, do którego przypisaliśmy plik o nazwie “plik.txt”. Najprostszym sposobem na odczyt danych z pliku jest użycie klasy Scanner.</p>
+        
+        <div class="article-codebox">
+        Scanner scanner = new Scanner(file);
+        </div>
+        
+        <p>Obie linie możemy połączyć, unikając zbędnego tworzenia obiektu File:</p>
+        
+        <div class="article-codebox">
+        Scanner scanner = new Scanner(new File(“plik.txt));
+        </div>
+        
+        <p>Plik możemy odczytać linia po linii używając:</p>
+        
+        <div class="article-codebox">
+        String line = scanner.nextLine();
+        </div>
+        
+        <p>Cały program (po zaimportowaniu odpowiednich klas) powinien wyglądać następująco:</p>
+        
+        <div class="article-codebox">
+        import java.io.File;<br>
+        import java.io.FileNotFoundException;<br>
+        import java.util.Scanner;<br>
+        <br>
+        public class Read {<br>
+            <u></u>public static void main(String[] args) throws FileNotFoundException {<br>
+                <u></u><u></u>File file = new File(“plik.txt");<br>
+                <u></u><u></u>Scanner scanner = new Scanner(file);<br>
+        <br>
+                <u></u><u></u>String line = scanner.nextLine();<br>
+                <u></u><u></u>System.out.println(line);<br>
+            <u></u>}<br>
+        }
+        </div>
+        
+        <p>Aby program zadziałał, plik, który importujemy powinien znaleźć się w tym samym folderze, co plik .class, w innym przypadku podajemy pełną ścieżkę do pliku (np. “/Users/user/plik.txt”).</p>
+        
+        <p>Jeżeli chcemy odczytać cały plik najprostszym sposobem jest użycie pętli while.</p>
+        
+        <div class="article-codebox">
+        import java.io.File;<br>
+        import java.io.FileNotFoundException;<br>
+        import java.util.Scanner;<br>
+        <br>
+        public class Read {<br>
+            <u></u>public static void main(String[] args) throws FileNotFoundException {<br>
+                <u></u><u></u>File file = new File(“plik.txt");<br>
+                <u></u><u></u>Scanner scanner = new Scanner(file);<br>
+        <br>
+                <u></u><u></u>String line = scanner.nextLine();<br>
+        <br>
+                <u></u><u></u>while(line != null) {<br>
+                    <u></u><u></u><u></u>System.out.println(line);<br>
+                    <u></u><u></u><u></u>line = scanner.nextLine();<br>
+                <u></u><u></u>}<br>
+            <u></u>}<br>
+        }
+        </div>
+        
+        
+
+        <a href="#" onclick="previous(12)" class="article-prev"><p>previous();</p></a>
+        <a href="#" onclick="next(12)" class="article-next"><p>next();</p></a>
+        <div style="clear: both;"></div>
+    </article>
+    <script src="/java/assets/js/cookies.js"></script>
+    <script src="/java/assets/js/main.js"></script>
+    <script src="/java/assets/js/article.js"></script>
+    <script>
+        $(document).ready( function () {
+            setProgress(12);
+        });
+    </script>
+</body>
+</html>

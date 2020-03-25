@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>LearnJava | Strona główna</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/java/assets/css/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body class="homepage-body">
+        <div class="homepage-cover">
+            <img class="logo" src="/java/assets/images/logo.svg">
+            <h1 class="homepage-heading">Naucz się podstaw Javy z LearnJava<br>w mniej niż tydzień!</h1>
+            <div class="homepage-links center">
+                <a href="#" onclick="toast('Logowanie niedostępne', 'Funkcja niedostępna w wersji demo. Przejdź bezpośrednio do panelu.', 'http://brandin.digital/java/dashboard', 'Panel')" class="left">
+                    <p>zaloguj();</p>
+                </a>
+                <div class="spacer"></div>
+                <a href="#" onclick="toast('Rejestracja niedostępna', 'Funkcja niedostępna w wersji demo. Przejdź bezpośrednio do panelu.', 'http://brandin.digital/java/dashboard', 'Panel')" class="left">
+                    <p>zarejestruj();</p>
+                </a>
+                <div style="clear: left;"></div>
+            </div>
+        </div>
+        <div class="toast-container">
+            <div class="toast-header">
+                <p class="toast-title" id="ttitle">Lorem ipsum</p>
+                <img onclick="closeToast()" src="/java/assets/images/close.svg" class="toast-close">
+            </div>
+            <div class="toast-body">
+                <p class="toast-text" id="ttext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut placeat aliquam quibusdam.</p>
+                <button class="toast-button" id="tbutton" onclick="toastLink()"></button>
+            </div>
+        </div>
+        <script src="/java/assets/js/main.js"></script>
+    </body>
+</html>

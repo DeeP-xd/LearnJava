@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LearnJava | Cechy języka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/java/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <img class="logo" src="/java/assets/images/logo.svg">
+    <a href="/java/dashboard/">
+        <p class="dashboard-link">dashboard();</p>
+    </a>
+    <article>
+        <h1>Cechy języka</h1>
+        <h2>Obiektowość</h2>
+        <p>Java jest językiem opartym na obiektach, dzięki czemu możemy modularyzować kod (dzielić na “klocki”, z których
+            możemy zbudować coś większego - program). Znacznie poprawia to czytelność kodu, pomaga dzielić go na logiczne
+            części, a także odzwierciedlać nasz świat w programie (w końcu cały nasz świat składa się z obiektów).</p>
+        <h2>Przenośność</h2>
+        <p>Kod napisany w Javie działa podobnie na różnych platformach sprzętowych. Zalety - zgodnie z hasłem reklamowym
+            „napisz raz, uruchom wszędzie”, wady - dłuższy czas wykonania programów.</p>
+        <h2>Hermetyzacja</h2>
+        <p>Java posiada mechanizmy zabezpieczające przed nieuprawnionym dostępem do elementów klasy. Oznacza to, że dostęp
+            do wybranych metod / zmiennych jest ograniczony wewnątrz klasy (zewnętrzne klasy nie mają do nich dostępu).</p>
+        <h2>Dziedziczenie</h2>
+        <p>Czyli mechanizm umożliwiający tworzenie klas bazujących na innej klasie - dziedzicząc jej metody i zmienne. W
+            Javie każdy obiekt dziedziczy po klasie Object.</p>
+        <h2>Polimorfizm</h2>
+        <p>Klasa może przyjmować wiele wiele form w postaci klas, które ją dziedziczą, przesłaniając metody klasy bazowej.
+        </p>
+        <h2>Obsługa wyjątków</h2>
+        <p>Wyjątki, to sytuacje, w których program zwykle przestaje działać (np. próba otworzenia nieistniejącego pliku).
+            Java pozwala na dodanie kodu, dzięki którym program poradzi sobie z takimi sytuacjami.</p>
+        <h2>Statyczne typowanie</h2>
+        <p>Każda zmienna ma z góry ustalony typ, co pozwala uniknąć błędów, polegających na automatycznym przypisaniu
+            niewłaściwego typu do zmiennej.</p>
+        <h2>Automatyczne zarządzanie pamięcią</h2>
+        <p>Java posiada wbudowany “odśmiecacz”, dzięki któremu tworząc jakiś obiekt / zmienną nie musimy martwić się o
+            zwolnienie zarezerwowanej pamięci - zrobi to za nas środowisko uruchomieniowe Javy. Zadba ono również o
+            zwolnienie pamięci, w przypadku gdy próbujemy utworzyć nowy obiekt, na który nie ma miejsca.</p>
+        <a href="#" onclick="previous(1)" class="article-prev"><p>previous();</p></a>
+        <a href="#" onclick="next(1)" class="article-next"><p>next();</p></a>
+        <div style="clear: both;"></div>
+    </article>
+    <script src="/java/assets/js/cookies.js"></script>
+    <script src="/java/assets/js/main.js"></script>
+    <script src="/java/assets/js/article.js"></script>
+    <script>
+        $(document).ready( function () {
+            setProgress(1);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LearnJava | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/java/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <img class="logo" src="/java/assets/images/logo.svg">
+    <a href="/java/dashboard/">
+        <p class="dashboard-link">dashboard();</p>
+    </a>
+    <article>
+        
+        <h1>Klasy</h1>
+
+        <p>A teraz jak odnieść się do obiektu, który stworzyliśmy? Jak narazie mamy tylko szablon. Sam obiekt trzeba dopiero stworzyć. W tym celu, poza naszą klasą (np. w funkcji main) dopisujemy:</p>
+
+        <div class="article-codebox">
+        Car car1 = new Car();<br>
+        <br>
+        car1.brand = “Fiat”;<br>
+        car1.model = “126p”;<br>
+        car1.year = 1840;<br>
+        car1.mileage = 24573;<br>
+        car1.fuelLevel = 20.34;<br>
+        <br>
+        System.out.println(car1.getInfo());<br>
+        <br>
+        car1.drive();<br>
+        car1.drive();<br>
+        car1.drive();<br>
+        <br>
+        System.out.println(car1.getInfo());<br>
+        <br>
+        car1.drive();<br>
+        car1.drive();<br>
+        car1.drive();<br>
+        car1.drive();<br>
+        car1.drive();<br>
+        car1.drive();<br>
+        <br>
+        System.out.println(car1.getInfo());<br>
+        <br>
+        car1.tank(10.37);<br>
+        <br>
+        System.out.println(car1.getInfo());
+        </div>
+
+        <p>Tak naprawdę kod, który widzicie przed sobą nie tylko tworzy obiekt, ale także go używa. A więc: w pierwszej linii tworzymy nowy obiekt - typ zmiennej Car, ponieważ tworzymy samochód, który jest nowym obiektem typu samochód (“new Car()”). W liniach 3-7 zmieniamy poszczególne wartości atrybutów samochodu. Linie 9, 15, 24 oraz 28 wyświetlają nam informacje o samochodzie, 11-13 oraz 17-22 “jeżdżą” naszym samochodem, a konkretnie zmiejszają ilość paliwa (o 0.2 na każde wywołanie funkcji), natomiast w 26 linii tankujemy nasz samochód (czyli w praktyce dodajemy 10.37 do ilości paliwa).</p>
+
+
+        <a href="#" onclick="previous(11)" class="article-prev"><p>previous();</p></a>
+        <a href="#" onclick="next(11)" class="article-next"><p>next();</p></a>
+        <div style="clear: both;"></div> 
+    </article>
+    <script src="/java/assets/js/cookies.js"></script>
+    <script src="/java/assets/js/main.js"></script>
+    <script src="/java/assets/js/article.js"></script>
+    <script>
+        $(document).ready( function () {
+            setProgress(11);
+        });
+    </script>
+</body>
+</html>

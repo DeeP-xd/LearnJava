@@ -1,0 +1,80 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LearnJava | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/java/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <img class="logo" src="/java/assets/images/logo.svg">
+    <a href="/java/dashboard/">
+        <p class="dashboard-link">dashboard();</p>
+    </a>
+    <article>
+
+        <h1>Operatory</h1>
+
+        <ul>
+            <li>+ - dodawanie</li>
+            <li>- - odejmowanie</li>
+            <li>* - mnożenie</li>
+            <li>/ - dzielenie</li>
+            <li>% - modulo (reszta z dzielenia)</li>
+        </ul>
+
+        <ul>
+            <li>+ - dodawanie</li>
+            <li>- - odejmowanie</li>
+            <li>* - mnożenie</li>
+            <li>/ - dzielenie</li>
+            <li>% - modulo (reszta z dzielenia)</li>
+        </ul>
+
+        <ul>
+            <li>++ - dodaje 1 do wartości zmiennej</li>
+            <li>-- - odejmuje 1 od wartości zmiennej</li>
+        </ul>
+
+        <ul>
+            <li>+= - dodaje wartość do zmiennej przed znakiem</li>
+            <li>-= - odejmuje wartość od zmiennej przed znakiem</li>
+            <li>*= - mnoży zmienną przed znakiem przez wartość</li>
+            <li>/= - dzieli zmienną przed znakiem przez wartość</li>
+            <li>%= - przypisuje do zmiennej resztę z dzielenia jej przez wartość</li>
+        </ul>
+
+        <h2>Przykłady:</h2>
+
+        <div class="article-codebox">
+            int a = 3 + 2; // a = 5<br>
+            int b = 12 * 3; // b = 36<br>
+            double c = 5 / 2;  // c = 2.5<br>
+            int d = 15 / 4; // d = 3<br>
+            <br>
+            a++; // a = 6<br>
+            b--; // b = 35<br>
+            <br>
+            a += 4; // a = 10<br>
+            b -= 12; // b = 23<br>
+            <br>
+            a /= 5; // a = 2<br>
+            <br>
+            b %= 5; // b = 3
+        </div>
+
+        <a href="#" onclick="previous(5)" class="article-prev"><p>previous();</p></a>
+        <a href="#" onclick="next(5)" class="article-next"><p>next();</p></a>
+        <div style="clear: both;"></div> 
+    </article>
+    <script src="/java/assets/js/cookies.js"></script>
+    <script src="/java/assets/js/main.js"></script>
+    <script src="/java/assets/js/article.js"></script>
+    <script>
+        $(document).ready( function () {
+            setProgress(5);
+        });
+    </script>
+</body>
+</html>

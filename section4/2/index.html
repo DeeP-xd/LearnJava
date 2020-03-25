@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LearnJava | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/java/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <img class="logo" src="/java/assets/images/logo.svg">
+    <a href="/java/dashboard/">
+        <p class="dashboard-link">dashboard();</p>
+    </a>
+    <article>
+
+        <h1>switch</h1>
+        
+        <p>Instrukcja warunkowa, którą najprościej wyobrazić sobie jako menu - wybieramy jedną opcję spośród dostępnych i przechodzimy dalej.</p>
+        
+        <div class="article-codebox">
+        int x = 5;<br>
+        String day;<br>
+        <br>
+        switch (x) {<br>
+            <u></u>case 1:<br>
+            <u></u><u></u>day  = “Poniedziałek”;<br>
+            <u></u><u></u>break;<br>
+            <u></u>case 2:<br>
+            <u></u><u></u>day  = “Wtorek”;<br>
+            <u></u><u></u>break;<br>
+            <u></u>case 3:<br>
+            <u></u><u></u>day  = “Środa”;<br>
+            <u></u><u></u>break;<br>
+            <u></u>case 4:<br>
+            <u></u><u></u>day  = “Czwartek”;<br>
+            <u></u><u></u>break;<br>
+            <u></u>case 5:<br>
+            <u></u><u></u>day  = “Piątek”;<br>
+            <u></u><u></u>break;<br>
+            <u></u>case 6:<br>
+            <u></u><u></u>day  = “Sobota”;<br>
+            <u></u><u></u>break;<br>
+            <u></u>case 7:<br>
+            <u></u><u></u>day  = “Niedziela”;<br>
+            <u></u><u></u>break;<br>
+            <u></u>default:<br>
+            <u></u><u></u>day = “błąd”;<br>
+            <u></u><u></u>break;<br>
+        }<br>
+        <br>
+        // day = “Piątek”
+        </div>
+        
+        <p>W tym przykładzie mamy 2 zmienne: “x", który oznacza numer dnia tygodnia oraz zmienną “day”, która przyjmuje odpowiednią wartość (nazwę dnia) do wartości x. W tym przypadku będzie to piątek.</p>
+        
+        <a href="#" onclick="previous(7)" class="article-prev"><p>previous();</p></a>
+        <a href="#" onclick="next(7)" class="article-next"><p>next();</p></a>
+        <div style="clear: both;"></div> 
+    </article>
+    <script src="/java/assets/js/cookies.js"></script>
+    <script src="/java/assets/js/main.js"></script>
+    <script src="/java/assets/js/article.js"></script>
+    <script>
+        $(document).ready( function () {
+            setProgress(7);
+        });
+    </script>
+</body>
+</html>

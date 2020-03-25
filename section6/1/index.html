@@ -1,0 +1,88 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LearnJava | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/java/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <img class="logo" src="/java/assets/images/logo.svg">
+    <a href="/java/dashboard/">
+        <p class="dashboard-link">dashboard();</p>
+    </a>
+    <article>
+
+        <h1>Klasy</h1>
+        
+        <p>Klasa, czyli “szablon” dla obiektu, który chcemy utworzyć składa się z kilku elementów:
+            <ul>
+                <li>nazwy,</li>
+                <li>atrybutów,</li>
+                <li>metod.</li>
+            </ul>
+        </p>
+
+        <p>Zaczynając od początku, nazwa klasy powinna określać jaką “foremkę” chcemy stworzyć, np. samochód.</p>
+
+        <div class="article-codebox">
+        class Car {<br>
+<br>
+        }
+        </div>
+
+        <p>W taki sposób utworzyliśmy klasę o nazwie “Car” (ze względu na dobre praktyki, warto od początku używać angielskiego, nazywając klasy, zmienne, itp).</p>
+
+        <p>Skoro mamy już “foremkę” do naszego samochodu, zastanówmy się jakie atrybuty może mieć samochód.</p>
+
+        <div class="article-codebox">
+        class Car {<br>
+            <u></u>String brand;<br>
+            <u></u>String model;<br>
+            <u></u>int year;<br>
+            <u></u>int mileage;<br>
+            <u></u>double fuelLevel;<br>
+        }
+        </div>
+
+        <p>W tym momencie nasz samochód posiada 4 atrybuty: markę, model, rocznik, przebieg oraz poziom paliwa. Kolejnym etapem będzie dodanie kilku metod (funkcji) do naszego samochodu.</p>
+
+        <div class="article-codebox">
+        class Car {<br>
+            <u></u>String brand;<br>
+            <u></u>String model;<br>
+            <u></u>int year;<br>
+            <u></u>int mileage;<br>
+            <u></u>double fuelLevel;<br>
+            <br>
+            <u></u>public void drive (speed) {<br>
+                <u></u><u></u>// tu opisujemy co dokładnie nasz pojazd ma zrobić, żeby jechać<br>
+            <u></u>}<br>
+            <br>
+            <u></u>public void stop () {<br>
+                <u></u><u></u>// tu opisujemy co dokładnie nasz pojazd ma zrobić, żeby się zatrzymać<br>
+            <u></u>}<br>
+            <br>
+            <u></u>public String getInfo () {<br>
+                <u></u><u></u>return mileage + “ “ + fuelLevel;<br>
+            <u></u>}<br>
+        }
+        </div>
+
+        <p>Mamy 2 metody typu void (które nie zwracają żadnej wartości) i jedną typu String, która zwraca nam ciąg znaków (w postaci przebiegu oraz poziomu paliwa, oddzielone spacją).</p>
+
+        <a href="#" onclick="previous(9)" class="article-prev"><p>previous();</p></a>
+        <a href="#" onclick="next(9)" class="article-next"><p>next();</p></a>
+        <div style="clear: both;"></div>
+    </article>
+    <script src="/java/assets/js/cookies.js"></script>
+    <script src="/java/assets/js/main.js"></script>
+    <script src="/java/assets/js/article.js"></script>
+    <script>
+        $(document).ready( function () {
+            setProgress(9);
+        });
+    </script>
+</body>
+</html>
